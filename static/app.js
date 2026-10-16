@@ -4,7 +4,7 @@ let riskChart = null;
 function showPage(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === `page-${name}`));
   document.querySelectorAll('.nav-link').forEach(b => b.classList.toggle('active', b.dataset.page === name));
-  const titles = {dashboard:'Security overview', scanner:'Package scanner', source:'Source code review', analytics:'Mid-II analytics'};
+  const titles = {dashboard:'Security overview', scanner:'Package scanner', source:'Source code review'};
   document.getElementById('page-title').textContent = titles[name] || 'Dashboard';
   if (name === 'analytics') loadAnalytics();
 }
